@@ -11,7 +11,7 @@ void main() {
   });
   group('fromJson', () {
     test('should create instance from json', () {
-      final Map<String, dynamic> json = {
+      final Map<String, dynamic> json = <String, dynamic>{
         'title': 'test-title',
         'content': 'test-content'
       };
