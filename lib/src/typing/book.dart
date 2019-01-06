@@ -5,10 +5,10 @@ part 'book.g.dart';
 
 @JsonSerializable(anyMap: true)
 class Book {
-  String title = '';
+  String title;
 
   /// Paragraphs in the book.
-  List<Text> paragraphs = [];
+  List<Text> paragraphs;
 
   /// Number of paragraphs in the book.
   /// We need this (instead of using paragraphs.length) because
@@ -19,8 +19,8 @@ class Book {
 
   int id;
 
-  Book(this.title, this.paragraphs, this.id)
-      : paragraphCount = paragraphs.length;
+  Book([this.title = '', this.paragraphs, this.id])
+      : paragraphCount = paragraphs?.length;
 
   Book.withoutParagraphs(this.title, this.paragraphCount, this.id);
 
